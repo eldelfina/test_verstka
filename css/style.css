@@ -86,18 +86,6 @@ img {
 
 /* Header styles end */
 
-h2 {
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 52px;
-}
-
-h3 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 29px;
-}
-
 .button {
     width: 222px;
     height: 50px;
