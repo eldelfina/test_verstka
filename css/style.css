@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Segoe UI"; /* Имя шрифта */
+    src: url(../fonts/SegoeUI/SegoeUI.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    color: black;
+    font-size: 16px;
+    line-height: 142%;
+}
+
+img {
+    display: block;
+}
+/* Header styles start */
+
+.header {
+    font-family: Whitney, sans-serif;
+    font-weight: 325;
+    font-size: 18px;
+    line-height: 23px;
+    font-style: normal;
+    color: white;
+    background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 33px;
+}
+
+
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.header__item {
+    margin-right: 100px;
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}
+
+.header__item:last-child .header__link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active {
+    opacity: 0.75;
+}
+
+.header__icon {
+    display: block;
+    margin-right: 12px;
+}
+
+.header__signup {
+    display: block;
+}
+
+/* Header styles end */
+
+h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.button {
+    width: 222px;
+    height: 50px;
+    background: #F25B24;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    font-family: Whitney, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+/* Intro styles start */
+
+.intro {
+    background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
+    color: white;
+    font-family: Whitney, sans-serif;
+}
+
+.intro__wrapper {
+    position: relative;
+}
+
+.intro__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+    max-width: 527px;
+    padding-top: 100px;
+    margin-bottom: 30px;
+
+}
+
+.intro__subtitle {
+    font-weight: 350;
+    font-size: 24px;
+    line-height: 31px;
+    width: 515px;
+    margin-bottom: 60px;
+}
+
+.intro__mainimg {
+    position: absolute;
+    top: 57px;
+    right: 0;
+}
+
+.intro__button {
+   margin-bottom: 180px;
+}
+/*Intro styles end */
+
+/*Benefits styles start */
+
+.benefits__title {
+    font-family: Whitney, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    color: #2E2D35;
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px 30px;
+}
+
+.benefits__card {
+    background: rgba(246, 245, 249, 1);
+    border-radius: 6px;
+    padding: 21px 10px 21px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits__card-item:first-child {
+    max-width: 280px;
+    height: auto;
+}
+
+.benefits__card-item:last-child {
+    max-height: 193px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.benefits__card-title {
+    padding: 22px 0;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+    color: #2E2D35;
+}
+
+.benefits__card-desk {
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 142%;
+    color: #474351;
+}
+
+/*Benefits styles end*/
