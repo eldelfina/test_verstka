@@ -13,17 +13,29 @@
     <div class="wrapper">
         <div class="header__wrapper">
             <div class="header__logo">
-                <img src="./img/svg/test-logo.svg" alt="header__logo">
+                <a class="header__logo-link" href="#">
+                    <img src="./img/svg/test-logo.svg" alt="header__logo">
+                </a>
             </div>
+
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__item"><a href="#" class="header__link">Клиентам</a></li>
                     <li class="header__item"><a href="#" class="header__link"><img src="./img/svg/header__icon.svg"
                                                                                    alt="header__icon"
-                                                                                   class="header__icon"><span
-                            class="header__signup">Войти</span></a></li>
+                                                                                    class="header__icon">
+                        <span class="header__signup">Войти</span></a></li>
                 </ul>
+                <div class="header__nav-close">
+                    <span class="header__nav-close-line"></span>
+                    <span class="header__nav-close-line"></span>
+                </div>
             </nav>
+            <div class="header__burger burger">
+                <span class="burger__line burger__line_first"></span>
+                <span class="burger__line burger__line_second"></span>
+                <span class="burger__line burger__line_third"></span>
+            </div>
         </div>
     </div>
 </header>
@@ -117,6 +129,6 @@
 
 </body>
 
-//javascript
+<script src="./js/main.js"></script>
 
 </html>

@@ -1,1 +1,0 @@
-function x(n){return n+3}console.log(x(5));
