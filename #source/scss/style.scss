@@ -37,6 +37,9 @@ body {
   }
 
   @include fontz(18px, 600, 100%);
+  @media screen and(max-width: 992px) {
+    width: 180px;
+  }
 }
 
 /* style for wrapper */
@@ -45,11 +48,21 @@ body {
   max-width: 1185px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @media screen and(max-width: 1185px) {
+    max-width: 970px;
+  }
+  @media screen and(max-width: 992px) {
+      max-width: 900px;
+  }
+  @media screen and(max-width: 767px) {
+      max-width: none;
+}
 }
 
 /* Header styles start */
 
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,81 +70,161 @@ body {
   transition: .2s linear;
   padding-bottom: 20px;
   z-index: 999;
-}
-.header_active{
-  background: $darkviolet;
-}
-.header__wrapper{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 33px;
-}
-.header__list{
-  display: flex;
-}
 
-.header__item{
-  margin-right: 99px;
+  .header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 33px;
 
-  &:last-child{
-    margin-right: 0;
+    .header__nav {
+      @media screen and(max-width: 767px) {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, $darkviolet 0%, $lightviolet 100%);
+      z-index: 10;
+      transform: translateX(100%);
+      transition: .2s all linear;
 
-    .header__link {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      flex-direction: row;
+      .header__nav-close {
+        @media screen and(max-width: 767px) {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 11;
 
-      .header__link-pic {
-        margin-right: 12px;
+          .header__nav-close-line {
+            @media screen and(max-width: 767px) {
+              display: block;
+              width: 100%;
+              height: 2px;
+              background-color: #fff;
+              position: absolute;
+              top: 50%;
+            }
+
+            &:first-child {
+              @media screen and(max-width: 767px) {
+                transform: translateY(-50%) rotate(45deg);
+              }
+            }
+
+            &:last-child {
+              @media screen and(max-width: 767px) {
+                transform: translateY(-50%) rotate(-45deg);
+              }
+            }
+          }
+        }
+      }
+
+    }
+    }
+    .header__nav_active {
+    @media screen and(max-width: 767px) {
+        transform: translateX(0);
+    }
+  }
+  }
+
+  .header__list {
+    display: flex;
+    @media screen and(max-width: 767px) {
+      margin: 75px;
+      flex-direction: column;
+    }
+  }
+
+  .header__item {
+    margin-right: 99px;
+
+    @media screen and(max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      @media screen and(max-width: 767px) {
+        margin-bottom: 0;
+      }
+
+      .header__link {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+
+        .header__link-pic {
+          margin-right: 12px;
+        }
       }
     }
   }
+
+  .header__link {
+    font-family: "Whitney", sans-serif;
+    @include fontz(18px, 325, 23px);
+    color: white;
+    text-decoration: none;
+    @media screen and(max-width: 767px) {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+
+  .header__link:hover, .header__link:focus, .header__link:active {
+    opacity: .75;
+  }
+
+  .header__burger {
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+    @media screen and(max-width: 767px) {
+      display: block;
+    }
+
+    .burger__line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+    }
+  
+    .burger__line_first {
+      top: 0;
+    }
+  
+    .burger__line_second {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  
+    .burger__line_third {
+      bottom: 0;
+    }
+
+  }
+
+
 }
 
-.header__link {
-  font-family: "Whitney", sans-serif;
-  @include fontz(18px, 325, 23px);
-  color: white;
-  text-decoration: none;
+.header_active {
+  background: linear-gradient(90deg, $darkviolet 0%, $lightviolet 100%);
 }
-.header__link:hover, .header__link:focus, .header__link:active{
-  opacity: .75;
-}
-
-.header__burger{
-  display: none;
-  width: 40px;
-  height: 28px;
-  position: relative;
-}
-
-.burger__line{
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-}
-
-.burger__line_first{
-  top: 0;
-}
-
-.burger__line_second{
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.burger__line_third{
-  bottom: 0;
-}
-
 /* Header styles end */
 
 /* Intro styles start */
@@ -142,35 +235,92 @@ body {
   font-family: 'Whitney', sans-serif;
   padding-top: 98px;
 
+  @media screen and(max-width: 1185px) {
+    padding-top: 60px;
+  }
+  @media screen and(max-width: 776px) {
+    text-align: center;
+  }
+
   .intro__wrapper {
     position: relative;
 
     .intro__title {
-      max-width: 527px;
+      width: 45%;
       padding-top: 100px;
       margin-bottom: 30px;
       z-index: 8;
       position: relative;
-      @include fontz(50px, 600, 120%)
+
+      @include fontz(50px, 600, 120%);
+      @media screen and(max-width: 1185px) {
+        @include fontz(44px, 600, 120%)
+      };
+      @media screen and(max-width: 992px) {
+        width: 70%;
+      }
+      @media screen and(max-width: 776px) {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+      }
     }
 
     .intro__subtitle {
-      width: 515px;
+      width: 44%;
       margin-bottom: 60px;
       z-index: 8;
       position: relative;
-      @include fontz(24px, 350, 31px)
+      @include fontz(24px, 350, 31px);
+      @media screen and(max-width: 1185px) {
+        margin-bottom: 40px;
+      }
+      @media screen and(max-width: 992px) {
+        width: 50%;
+      }
+      @media screen and(max-width: 776px) {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
     }
 
     .intro__mainimg {
+      width: 58.888%;
       position: absolute;
       top: 57px;
       right: 0;
       z-index: 1;
+      @media screen and(max-width: 1185px) {
+        top: 85px;
+      }
+      @media screen and(max-width: 992px) {
+        width: 50%;
+        top: 55%;
+        transform: translateY(-50%);
+      }
+
+      @media screen and(max-width: 774px) {
+        display: none;
+      }
+
+      .intro__mainimg-pic{
+        max-width: 100%;
+      }
     }
 
     .intro__button {
       margin-bottom: 180px;
+
+      @media screen and(max-width: 1185px) {
+        margin-bottom: 100px;
+      }
+      @media screen and(max-width: 992px) {
+        margin-bottom: 80px;
+      }
     }
   }
 }
@@ -181,12 +331,25 @@ body {
 
 .benefits {
   padding: 130px 0;
+  @media screen and(max-width: 1185px) {
+    padding: 70px 0;
+  }
+  @media screen and(max-width: 767px) {
+    padding: 40px 0;
+  }
 
   .benefits__title {
     font-family: "Whitney", sans-serif;
     padding-bottom: 50px;
     color: $titleblack;
-    @include fontz(40px, 600, 52px)
+    @include fontz(40px, 600, 52px);
+    @media screen and(max-width: 992px) {
+      @include fontz(36px, 600, 48px);
+    }
+    @media screen and(max-width: 767px) {
+      @include fontz(32px, 600, 44px);
+      padding-bottom: 40px;
+    }
   }
 
   .benefits__grid {
@@ -194,6 +357,10 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 30px 30px;
+    @media screen and(max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
 
     .benefits__card {
       background: $lightgray;
@@ -201,30 +368,51 @@ body {
       padding: 21px 10px 21px 40px;
       display: flex;
       justify-content: space-between;
+      @media screen and(max-width: 1185px) {
+        padding: 10px 5px 20px 30px;
+      }
 
       .benefits__card-item {
         &:first-child {
           max-width: 280px;
           height: auto;
+          @media screen and(max-width: 992px) {
+            max-width: 60%;
+          }
         }
 
         &:last-child {
-          max-height: 193px;
-          width: auto;
-          box-sizing: border-box;
+          align-self: center;
         }
 
         .benefits__card-title {
           padding: 22px 0;
           font-family: "Segoe UI", sans-serif;
           color: $titleblack;
-          @include fontz(22px, 600, 29px)
+          @include fontz(22px, 600, 29px);
+
+          @media screen and(max-width: 1185px) {
+            padding: 15px 0;
+          }
+          @media screen and(max-width: 992px) {
+            @include fontz(18px, 600, 27px);
+          }
+          @media screen and(max-width: 767px) {
+            @include fontz(24px, 600, 27px);
+          }
         }
 
         .benefits__card-desk {
           font-family: "Segoe UI", sans-serif;
           color: $deskblack;
-          @include fontz(16px, normal, 142%)
+          @include fontz(16px, normal, 142%);
+          @media screen and(max-width: 767px) {
+            @include fontz(20px, normal, 142%px);
+          }
+        }
+
+        .benefits__card-thumb {
+          max-width: 100%;
         }
       }
     }
@@ -241,6 +429,17 @@ body {
   padding: 70px 0 70px 70px;
   margin-bottom: 185px;
   position: relative;
+  overflow: hidden;
+
+  @media screen and(max-width: 1185px) {
+    margin-bottom: 50px;
+    padding: 60px 0 60px 60px;
+  }
+
+  @media screen and(max-width: 776px) {
+    margin-bottom: 50px;
+    padding: 30px 0 30px 30px;
+  }
 
   .registration__desk {
     font-family: "Whitney", sans-serif;
@@ -250,87 +449,54 @@ body {
     z-index: 3;
     position: relative;
     @include fontz(34px, 600, 45px);
+
+    @media screen and(max-width: 992px) {
+      @include fontz(30px, 600, 40px);
+      max-width: 70%;
+      padding-bottom: 30px;
+    }
+    @media screen and(max-width: 780px) {
+      max-width: 100%;
+    }
+
   }
 
   .registration__pic-cars {
     position: absolute;
     right: 0;
-    top: 24px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
+    max-width: 55%;
+    & img {
+      max-width: 100%;
+    }
+   
+    @media screen and(max-width: 1185px) {
+      bottom: 0px;
+    }
+    @media screen and(max-width: 776px) {
+      top: 50%;
+    }
+
   }
 
   .registration__pic-map {
     position: absolute;
     right: 88px;
-    top: 19px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
+    max-width: 55%;
+    & img {
+      max-width: 100%;
+    }
+    @media screen and(max-width: 1185px) {
+      bottom: 0px;
+    }
+
   }
 }
 
 
 /*registration styles end*/
-
-/* Media start*/
-
-@media screen and(max-width: 736px) {
-  .header__burger {
-    display: block;
-  }
-  .header__nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    z-index: 10;
-    transform: translateX(100%);
-    transition: .2s all linear;
-  }
-  .header__nav_active{
-    transform: translateX(0);
-  }
-
-  .header__list {
-    margin: 75px;
-    flex-direction: column;
-  }
-
-  .header__item{
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-  .header__item:last-child{
-    margin-bottom: 0;
-  }
-  .header__link{
-    font-size: 42px;
-    line-height: 48px;
-  }
-  .header__nav-close{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 11;
-  }
-  .header__nav-close-line{
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-  }
-  .header__nav-close-line:first-child{
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .header__nav-close-line:last-child{
-    transform: translateY(-50%) rotate(-45deg);
-  }
-}
-
-
-/*Media end*/

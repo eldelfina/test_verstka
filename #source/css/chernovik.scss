@@ -1,0 +1,105 @@
+.header {
+    .header_wrapper {
+        .header__logo {
+            .header__logo-link {
+                .header__logo-pic
+            }
+        }
+
+        .header__nav {
+            .header__list {
+                .header__item {
+
+                    .header__link {
+
+                    }
+
+                    &:last-child {
+                        .header__link {
+                            .header__link-pic {
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__nav-close {
+                .headder__nav-close-line {
+
+                }
+            }
+        }
+
+        .header__burger {
+            .burger__line {
+                .burger__line_first {
+
+                }
+                .burger__line_second {
+
+                }
+                .burger__line_third {
+
+                }
+            }
+        }
+    }
+}
+
+.intro {
+    .intro__wrapper {
+        .intro__title {
+
+        }
+        .intro__subtitle {
+
+        }
+        .intro__button {
+
+        }
+        .intro__mainimg {
+            .intro__mainimg-pic
+        }
+    }
+}
+
+.benefits {
+    .benefits__title {
+    }
+    .benefits__grid {
+        .benefits__card {
+            .benefits__card-item {
+                .benefits__card-title {
+
+                }
+                .benefits__card-desk {
+
+                }
+
+                &:last-child {
+                    .benefits__card-thumb {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.registration {
+    .registration__wrapper {
+        .registration__desk {
+
+        }
+        .registration__button {
+
+        }
+        .registration__pic-cars {
+
+        }
+        .registration__pic-map {
+
+        }
+    }
+}
