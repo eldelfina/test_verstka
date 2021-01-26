@@ -29,8 +29,10 @@
     const signupButton = document.querySelector('.header__signup');
     const autorisation = document.querySelector('.autorisation');
     const autorisationCloseItem = document.querySelector('.autorisation__window-close');
+    const menu = document.querySelector('.header__nav');
     signupButton.addEventListener('click', () => {
         autorisation.classList.add('autorisation__active');
+        menu.classList.remove('header__nav_active');
      });
      autorisationCloseItem .addEventListener('click', () => {
         autorisation.classList.remove('autorisation__active')
