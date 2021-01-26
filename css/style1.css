@@ -356,7 +356,7 @@ textarea {
 }
 
 body {
-  background: #FFF;
+  background: #fff;
   font-style: normal;
 }
 
@@ -364,7 +364,7 @@ body {
 .button {
   width: 222px;
   height: 50px;
-  background: #F25B24;
+  background: #f25b24;
   border: 0;
   border-radius: 4px;
   color: white;
@@ -374,7 +374,7 @@ body {
   line-height: 100%;
 }
 .button:hover, .button:focus, .button:active {
-  background: #F36B56;
+  background: #f36b56;
 }
 @media screen and (max-width: 992px) {
   .button {
@@ -428,7 +428,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
+    background: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
     z-index: 10;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -519,7 +519,9 @@ body {
     line-height: 48px;
   }
 }
-.header .header__link:hover, .header .header__link:focus, .header .header__link:active {
+.header .header__link:hover,
+.header .header__link:focus,
+.header .header__link:active {
   opacity: 0.75;
 }
 .header .header__burger {
@@ -553,14 +555,14 @@ body {
 }
 
 .header_active {
-  background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
+  background: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
 }
 
 /* Header styles end */
 /* Intro styles start */
 .intro {
-  background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
-  color: #FFF;
+  background: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
+  color: #fff;
   font-family: "Whitney", sans-serif;
   padding-top: 98px;
 }
@@ -693,7 +695,7 @@ body {
 .benefits .benefits__title {
   font-family: "Whitney", sans-serif;
   padding-bottom: 50px;
-  color: #2E2D35;
+  color: #2e2d35;
   font-size: 40px;
   font-weight: 600;
   line-height: 52px;
@@ -726,7 +728,7 @@ body {
   }
 }
 .benefits .benefits__grid .benefits__card {
-  background: #F6F5F9;
+  background: #f6f5f9;
   border-radius: 6px;
   padding: 21px 10px 21px 40px;
   display: flex;
@@ -752,7 +754,7 @@ body {
 .benefits .benefits__grid .benefits__card .benefits__card-item .benefits__card-title {
   padding: 22px 0;
   font-family: "Segoe UI", sans-serif;
-  color: #2E2D35;
+  color: #2e2d35;
   font-size: 22px;
   font-weight: 600;
   line-height: 29px;
@@ -797,7 +799,7 @@ body {
 /*Benefits styles end*/
 /*registration styles start*/
 .registration__wrapper {
-  background: linear-gradient(90deg, #2D1686 0%, #4E33B5 100%);
+  background: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
   border-radius: 10px;
   padding: 70px 0 70px 70px;
   margin-bottom: 185px;
@@ -818,7 +820,7 @@ body {
 }
 .registration__wrapper .registration__desk {
   font-family: "Whitney", sans-serif;
-  color: #FFF;
+  color: #fff;
   padding-bottom: 46px;
   max-width: 556px;
   z-index: 3;
@@ -880,3 +882,89 @@ body {
 }
 
 /*registration styles end*/
+/*autorisation styles start*/
+.autorisation {
+  display: none;
+}
+.autorisation .autorisation__wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 24, 47, 0.3);
+  z-index: 20;
+}
+.autorisation .autorisation__wrapper .autorisation__window {
+  max-width: 490px;
+  max-height: 472px;
+  background: #fff;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 60px 55px 60px;
+  font-family: "Whitney", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 24px;
+  color: #474351;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__window-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__window-close img {
+  width: 100%;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+  padding-bottom: 35px;
+  color: #2e2d35;
+  text-align: center;
+  display: block;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__form {
+  width: 370px;
+  margin: 0;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__form p:first-child {
+  padding-bottom: 18px;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__form .autorisation__form-email, .autorisation .autorisation__wrapper .autorisation__window .autorisation__form .autorisation__form-pass {
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid #dddae7;
+  border-radius: 4px;
+  color: #918D9A;
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 100%;
+  width: 100%;
+  padding: 17px 16px 17px 12px;
+  box-sizing: border-box;
+}
+.autorisation .autorisation__wrapper .autorisation__window .autorisation__form .autorisation__form-submit {
+  margin-top: 34px;
+  display: block;
+  width: 370px;
+  height: 50px;
+  background: #f25b24;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  border: 0;
+}
+
+.autorisation__active {
+  display: block;
+}
+
+/*autorisation styles start*/

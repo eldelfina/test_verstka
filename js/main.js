@@ -22,3 +22,17 @@
         menu.classList.remove('header__nav_active')
     });
 }());
+
+//autorisation window 
+
+(function () {
+    const signupButton = document.querySelector('.header__signup');
+    const autorisation = document.querySelector('.autorisation');
+    const autorisationCloseItem = document.querySelector('.autorisation__window-close');
+    signupButton.addEventListener('click', () => {
+        autorisation.classList.add('autorisation__active');
+     });
+     autorisationCloseItem .addEventListener('click', () => {
+        autorisation.classList.remove('autorisation__active')
+    });
+}());
